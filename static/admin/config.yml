@@ -7,13 +7,13 @@ backend:
   
   collections:
     - name: designs
-    label: Designs
-    folder: design
-    create: true
-    fields:
+      label: Designs
+      folder: design
+      create: true
+      fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: Image, name: image, widget: image}
       - {label: Description, name: description, widget: string}
-      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
 
       
