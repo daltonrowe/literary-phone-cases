@@ -10,6 +10,10 @@ export default () => (
       <meta charSet="utf-8" />
       <title>Literary Phone Cases - Shakespeare, Jane Austen, Books</title>
       <link rel="canonical" href="http://mysite.com/example" />
+      <script
+        src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        defer
+      />
     </Helmet>
     <SiteHeader />
     <ContactForm />
