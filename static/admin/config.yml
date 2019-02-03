@@ -2,18 +2,18 @@ backend:
   name: literary-phone-cases
   branch: master
   
-  media_folder: static/assets
-  public_folder: assets
-  
-  collections:
-    - name: designs
-      label: Designs
-      folder: design
-      create: true
-      fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: Image, name: image, widget: image}
-      - {label: Description, name: description, widget: string}
-      - {label: "Title", name: "title", widget: "string"}
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: designs
+    label: Designs
+    folder: design
+    create: true
+    fields:
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: Image, name: image, widget: image}
+    - {label: Description, name: description, widget: string}
+    - {label: "Title", name: "title", widget: "string"}
 
       
