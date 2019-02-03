@@ -13,7 +13,8 @@ collections:
     fields:
     - { label: "Title", name: "title", widget: "string" }
     - { label: Image, name: image, widget: image }
+    - { label: "Image Alt Text", name: "alt", widget: "string" }
     - { label: Description, name: description, widget: string }
-    - { label: "Title", name: "title", widget: "string" }
+    - { label: "Store Link", name: "link", widget: "string" }
 
       
