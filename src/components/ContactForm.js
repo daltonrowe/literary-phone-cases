@@ -5,7 +5,7 @@ export default () => (
     <h2>Want Something Special?</h2>
 
     <form
-      name="contact"
+      name="literary-contact"
       method="POST"
       data-netlify="true"
       netlify-honeypot="mmm"
