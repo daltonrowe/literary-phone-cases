@@ -9,7 +9,7 @@ export default () => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>Literary Phone Cases - Shakespeare, Jane Austen, Books</title>
-      <link rel="canonical" href="http://mysite.com/example" />
+      <link rel="canonical" href="http://literaryphonescases.com" />
       <script
         src="https://identity.netlify.com/v1/netlify-identity-widget.js"
         defer
