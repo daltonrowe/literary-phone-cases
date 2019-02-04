@@ -1,10 +1,240 @@
-html {
+/* ------------------------------------------------------------------------ */
+/* Sitewide */
+/* ------------------------------------------------------------------------ */
 
+* {
+   box-sizing:border-box;
+}
+
+.hidden {
+   display:none !important;
+}
+
+html {
+   width:100%;
 }
 
 body {
+   margin:0;
+   padding:2em;
+   font-size:18px;
+   line-height: 1em;
+   width:100vw;
+   overflow-x:hidden;
 }
 
-p {
+img {
+   display:block;
+   width:100%;
+   max-width:100%;
+   height:auto;
+   margin-bottom:18px;
+}
 
+h1,h2,h3,h4,h5,h6 {
+   margin:0 0 12px 0;
+   line-height: 1.2em;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Layout */
+/* ------------------------------------------------------------------------ */
+
+#Page {
+   max-width:1200px;
+   margin:2em auto 0 auto;
+   position:relative;
+}
+
+#Masthead {
+   margin-bottom:18px;
+}
+
+@media screen and (min-width:800px) {
+   #Masthead {
+      display: grid;
+      grid-template-columns: 70% 30%;
+      grid-template-rows: 1auto;
+      grid-template-areas: "site-header contact-form";
+   }
+
+   #SiteHeader {
+      grid-area:site-header;
+      padding-right:24px;
+   }
+
+   #ContactForm {
+      grid-area:contact-form;
+   }
+}
+
+/* ------------------------------------------------------------------------ */
+/* Designs List */
+/* ------------------------------------------------------------------------ */
+
+ul.DesignsList {
+   list-style:none;
+   margin:0;
+   padding:0;
+}
+
+li.DesignItem {
+   border:2px solid black;
+   padding:1em;
+   margin-bottom:18px;
+}
+
+li.DesignItem h2 {
+   font-size:24px;
+}
+
+li.DesignItem a.ImageWrapper {
+   display:block;
+   overflow:hidden;
+   max-height:200px;
+   margin-bottom:18px;
+}
+
+@media screen and (min-width:570px) {
+   ul.DesignsList {
+      width:100%;
+      display:flex;
+      flex-wrap: wrap;
+   }
+   
+}
+
+@media screen and (min-width:570px) and (max-width:1199px) {
+   li.DesignItem {
+      flex:0 0 30%;
+      margin-bottom:2%;
+   }
+   
+   li.DesignItem:not(:nth-of-type(3n)) {
+      margin-right:2%;
+   }
+}
+
+@media screen and (min-width:1200px) {
+   li.DesignItem {
+      flex:0 0 19%;
+      margin-bottom:1.25%;
+   }
+   
+   li.DesignItem:not(:nth-of-type(5n)) {
+      margin-right:1.25%;
+   }
+}
+
+li.DesignItem span {
+   display:block;
+}
+
+li.DesignItem a.PurchaseLink {
+   display:inline-block;
+   clear:both;
+   margin-top:1em;
+   padding:1em;
+   background:black;
+   color:white;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Contact */
+/* ------------------------------------------------------------------------ */
+
+#contact {
+   position:absolute;
+   overflow:hidden;
+   top:0;
+   right:0;
+   width:100%;
+   max-width:600px;
+   max-height:100%;
+   overflow:scroll;
+   padding:2em;
+   pointer-events: none;
+   opacity:0;
+   transition:opacity .3s ease, transform .3s ease;
+   background-color: pink;
+   transform:translateY(-100%);
+}
+
+#contact:target {
+   pointer-events: all;
+   opacity:1;
+   z-index:2;
+   transform:translateY(0px);
+}
+
+#contact:target form {
+   margin:0;
+   display: grid;
+   grid-template-columns: 50% 50%;
+   grid-template-rows: auto auto;
+   grid-template-areas: "form form" "submit close";
+}
+
+#hmu { 
+   grid-area: form; 
+   margin-bottom:1em;
+}
+#contact button { 
+   grid-area: submit; 
+}
+#contact #close { 
+   grid-area: close; 
+}
+
+input, textarea {
+   width:100%;
+   border:none;
+   margin-top:12px;
+   padding:.75em;
+   font-size:16px;
+   border-left:3px solid black;
+   border-radius:none;
+   appearance: none;
+}
+
+textarea {
+   min-height: 100px;
+}
+
+#contact p {
+   margin:0 0 12px 0;
+}
+
+#contact button, 
+#contact a {
+   border:none;
+   padding:1em;
+   display:block;
+   width:100%;
+   border:2px dashed black; 
+   background-color: transparent;
+   font-size:16px;
+   text-align: center;
+}
+
+#contact button {
+   transition:border .3s ease, transform .3s ease;
+   cursor: pointer;
+}
+
+#contact button:hover {
+   border-style:dotted;
+   transform:translateY(-4px);
+}
+
+#contact a {
+   border-color: transparent;
+}
+
+label {
+   color:black;
+}
+
+.g-recaptcha {
+   margin-top:1em;
 }

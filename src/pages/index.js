@@ -5,17 +5,7 @@ import SiteHeader from "../components/SiteHeader";
 import ContactForm from "../components/ContactForm";
 import DesignsList from "../components/DesignsList";
 
-export default ({
-  data: {
-    allMarkdownRemark: { edges }
-  }
-}) => {
-  const Posts = edges.map(edge => (
-    <li key={edge.node.id} post={edge.node}>
-      post
-    </li>
-  ));
-
+export default () => {
   return (
     <div id="Page">
       <Helmet>
@@ -27,26 +17,11 @@ export default ({
           defer
         />
       </Helmet>
-      <SiteHeader />
-      <ContactForm />
+      <div id="Masthead">
+        <SiteHeader />
+        <ContactForm />
+      </div>
       <DesignsList />
-      {Posts}
     </div>
   );
 };
-
-export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___title] }) {
-      edges {
-        node {
-          id
-          frontmatter {
-            image
-            title
-          }
-        }
-      }
-    }
-  }
-`;
