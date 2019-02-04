@@ -8,7 +8,7 @@ export default () => (
       too :)
     </p>
     <p>
-      They are available for sale on{" "}
+      All cases are available for sale on{" "}
       <a href="https://www.redbubble.com/people/daltonrowe">RedBubble</a>.
     </p>
   </div>
