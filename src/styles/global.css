@@ -212,6 +212,7 @@ li.DesignItem a.PurchaseLink:hover {
    width:100%;
    text-align: center;
    background-color: white;
+   text-decoration: none;
 }
 
 #ContactForm h2 {
