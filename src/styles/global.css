@@ -138,7 +138,7 @@ li.DesignItem h2 {
 li.DesignItem a.ImageWrapper {
    display:block;
    overflow:hidden;
-   max-height:200px;
+   max-height:400px;
    margin-bottom:18px;
 }
 
@@ -163,6 +163,10 @@ li.DesignItem a.ImageWrapper {
    
    li.DesignItem:not(:nth-of-type(3n)) {
       margin-right:2%;
+   }
+
+   li.DesignItem a.ImageWrapper {
+      max-height:200px;
    }
 }
 
