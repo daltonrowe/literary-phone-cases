@@ -16,7 +16,7 @@ html {
 
 body {
    margin:0;
-   padding:2em;
+   padding:1em;
    font-size:18px;
    line-height: 1em;
    width:100vw;
@@ -26,12 +26,13 @@ body {
    background-image: url(/assets/page-bg.jpg);
    background-repeat: no-repeat;
    background-attachment: fixed;
-   background-size: cover;
+   background-size: 800px auto;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (min-width:800px) {
    body {
-      background-size: 800px auto;
+      padding:2em;
+      background-size: cover;
    }
 }
 
@@ -111,6 +112,12 @@ li.DesignItem {
    border-radius:8px;
    background-color: #fff;
    box-shadow:2px 2px 6px rgba(20,20,20,0.2);
+   transition:all .3s ease;
+}
+
+li.DesignItem:hover {
+   transform:scale(1.02);
+   box-shadow:4px 4px 6px rgba(20,20,20,0.1.7);
 }
 
 li.DesignItem div {
@@ -139,7 +146,7 @@ li.DesignItem a.ImageWrapper {
 
 @media screen and (min-width:570px) and (max-width:1199px) {
    li.DesignItem {
-      flex:0 0 30%;
+      flex:0 0 32%;
       margin-bottom:2%;
    }
    
@@ -164,17 +171,23 @@ li.DesignItem span {
 }
 
 li.DesignItem a.PurchaseLink {
-   display:inline-block;
+   display:block;
    clear:both;
-   margin-top:1em;
+   margin-top:1.5em;
    padding:.75em .75em .5em .75em;
    font-size:11px;
    text-transform: UPPERCASE;
    border:1px solid #999;
    color:black;
    text-decoration: none;
+   text-align: center;
    font-family: sans-serif;
    border-radius: 6px;
+   transition:all .3s ease;
+}
+
+li.DesignItem a.PurchaseLink:hover {
+   background-color:#ff7d95;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -188,6 +201,18 @@ li.DesignItem a.PurchaseLink {
    width:100%;
    text-align: center;
    background-color: white;
+}
+
+#ContactForm h2 {
+   margin-top:1em;
+   font-size:21px
+}
+
+@media screen and (min-width:800px) {
+   #ContactForm h2 {
+      margin-top:0;
+      font-size:26px;
+   }  
 }
 
 #contact {

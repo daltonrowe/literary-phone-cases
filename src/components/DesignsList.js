@@ -30,13 +30,6 @@ const DesignsList = () => {
           return (
             <>
               <DesignItem key={edge.node.id} design={edge.node} />
-              <DesignItem key={edge.node.id} design={edge.node} />
-              <DesignItem key={edge.node.id} design={edge.node} />
-              <DesignItem key={edge.node.id} design={edge.node} />
-              <DesignItem key={edge.node.id} design={edge.node} />
-              <DesignItem key={edge.node.id} design={edge.node} />
-              <DesignItem key={edge.node.id} design={edge.node} />
-              <DesignItem key={edge.node.id} design={edge.node} />
             </>
           );
         });
