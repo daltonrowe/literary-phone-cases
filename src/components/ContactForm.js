@@ -3,8 +3,10 @@ import React from "react";
 export default () => (
   <div id="ContactForm">
     <h2>Want Something Special?</h2>
-    <a href="#contact">Let me know!</a>
-    <div id="contact" class="">
+    <a id="ContactButton" href="#contact">
+      Let me know!
+    </a>
+    <div id="contact" className="">
       <form
         name="contact"
         method="POST"
@@ -17,7 +19,7 @@ export default () => (
             Want a different color than what if offered, or just want something
             special for a loved one? I'll let you know if I can help.
           </p>
-          <p class="hidden">
+          <p className="hidden">
             <label>
               Don’t fill this out if you're human: <input name="mmm" />
             </label>
@@ -32,10 +34,14 @@ export default () => (
               Email: <input type="email" name="email" />
             </label>
           </p>
-          <p class="hidden">
+          <p className="hidden">
             <label>
               Subject:{" "}
-              <input type="text" name="subject" value="[Phone Case Idea]" />
+              <input
+                type="text"
+                name="subject"
+                defaultValue="[Phone Case Idea]"
+              />
             </label>
           </p>
           <p>

@@ -9,7 +9,14 @@ export default () => (
     </p>
     <p>
       All cases are available for sale on{" "}
-      <a href="https://www.redbubble.com/people/daltonrowe">RedBubble</a>.
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.redbubble.com/people/daltonrowe"
+      >
+        RedBubble
+      </a>
+      .
     </p>
   </div>
 );

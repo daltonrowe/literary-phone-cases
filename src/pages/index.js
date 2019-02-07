@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import SiteHeader from "../components/SiteHeader";
 import ContactForm from "../components/ContactForm";
 import DesignsList from "../components/DesignsList";
+import SiteFooter from "../components/SiteFooter";
 
 export default () => {
   return (
@@ -16,12 +17,17 @@ export default () => {
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
           defer
         />
+        <link
+          href="https://fonts.googleapis.com/css?family=Libre+Baskerville"
+          rel="stylesheet"
+        />
       </Helmet>
       <div id="Masthead">
         <SiteHeader />
         <ContactForm />
       </div>
       <DesignsList />
+      <SiteFooter />
     </div>
   );
 };
