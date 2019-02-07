@@ -21,6 +21,13 @@ export default () => {
           href="https://fonts.googleapis.com/css?family=Libre+Baskerville"
           rel="stylesheet"
         />
+        <meta property="og:title" content="Literary Phone Cases" />
+        <meta property="og:image" content="/assets/opengraph.jpg" />
+        <meta property="og:site_name" content="Literary Phone Cases" />
+        <meta
+          property="og:description"
+          content="Phone cases and other accessories based on literature's greatest."
+        />
       </Helmet>
       <div id="Masthead">
         <SiteHeader />
