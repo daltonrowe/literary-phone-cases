@@ -28,7 +28,7 @@ export default () => {
         <meta property="og:site_name" content="Literary Phone Cases" />
         <meta
           property="og:description"
-          content="Phone cases and other accessories based on literature's greatest."
+          content="Phone cases and other accessories based on literature's greats."
         />
       </Helmet>
       <div id="Masthead">
