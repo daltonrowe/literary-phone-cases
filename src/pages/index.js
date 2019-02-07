@@ -38,6 +38,7 @@ export default () => {
         <SiteHeader />
         <ContactForm />
       </div>
+      <div id="ThankYou" />
       <DesignsList />
       <SiteFooter />
     </div>
