@@ -11,7 +11,10 @@ export default () => {
     <div id="Page">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Literary Phone Cases - Shakespeare, Jane Austen, Books</title>
+        <title>
+          Literary Phone Cases - Shakespeare, Jane Austen, Accessories and Neat
+          Stuff
+        </title>
         <link rel="canonical" href="https://literaryphonescases.com" />
         <script
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
