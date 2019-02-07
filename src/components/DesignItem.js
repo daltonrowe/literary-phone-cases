@@ -2,15 +2,15 @@ import React from "react";
 
 const DesignItem = ({ design }) => (
   <li className="DesignItem">
-    <a
-      className="ImageWrapper"
-      target="_blank"
-      rel="noopener noreferrer"
-      href={design.frontmatter.link}
-    >
-      <img src={design.frontmatter.image} alt={design.frontmatter.alt} />
-    </a>
-    <div>
+    <div className="DesignItemInner">
+      <a
+        className="ImageWrapper"
+        target="_blank"
+        rel="noopener noreferrer"
+        href={design.frontmatter.link}
+      >
+        <img src={design.frontmatter.image} alt={design.frontmatter.alt} />
+      </a>
       <h2>{design.frontmatter.title}</h2>
       <span>{design.frontmatter.description}</span>
       <a
