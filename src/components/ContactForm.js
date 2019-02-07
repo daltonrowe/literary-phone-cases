@@ -84,7 +84,7 @@ export default class ContactForm extends React.Component {
                   <input
                     type="text"
                     name="subject"
-                    defaultValue="[Phone Case Idea]"
+                    value="[Phone Case Idea]"
                     onChange={this.handleChange}
                   />
                 </label>
