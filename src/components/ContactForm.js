@@ -46,6 +46,7 @@ export default class Contact extends React.Component {
             method="POST"
             data-netlify="true"
             netlify-honeypot="mmm"
+            onSubmit={this.handleSubmit}
           >
             <div id="hmu">
               <h2>Get in Touch</h2>
@@ -56,17 +57,24 @@ export default class Contact extends React.Component {
               </p>
               <p className="hidden">
                 <label>
-                  Don’t fill this out if you're human: <input name="mmm" />
+                  Don’t fill this out if you're human:{" "}
+                  <input name="mmm" onChange={this.handleChange} />
                 </label>
               </p>
               <p>
                 <label>
-                  Name: <input type="text" name="name" />
+                  Name:{" "}
+                  <input type="text" name="name" onChange={this.handleChange} />
                 </label>
               </p>
               <p>
                 <label>
-                  Email: <input type="email" name="email" />
+                  Email:{" "}
+                  <input
+                    type="email"
+                    name="email"
+                    onChange={this.handleChange}
+                  />
                 </label>
               </p>
               <p className="hidden">
@@ -76,12 +84,14 @@ export default class Contact extends React.Component {
                     type="text"
                     name="subject"
                     defaultValue="[Phone Case Idea]"
+                    onChange={this.handleChange}
                   />
                 </label>
               </p>
               <p>
                 <label>
-                  What's your idea?: <textarea name="message" />
+                  What's your idea?:{" "}
+                  <textarea name="message" onChange={this.handleChange} />
                 </label>
               </p>
               <div data-netlify-recaptcha="true" />
