@@ -19,7 +19,7 @@ const DesignItem = ({ design }) => (
         className="PurchaseLink"
         href={design.frontmatter.link}
       >
-        Click for sizes and styles.
+        Click for sizes and styles
       </a>
     </div>
   </li>
