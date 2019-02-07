@@ -23,6 +23,8 @@ export default () => {
         />
         <meta property="og:title" content="Literary Phone Cases" />
         <meta property="og:image" content="/assets/opengraph.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Literary Phone Cases" />
         <meta
           property="og:description"
