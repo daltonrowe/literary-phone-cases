@@ -28,7 +28,7 @@ export default class ContactForm extends React.Component {
         ...this.state
       })
     })
-      .then(() => (window.location = "/"))
+      .then(() => (window.location = "/#ThankYou"))
       .catch(error => alert(error));
   };
 
