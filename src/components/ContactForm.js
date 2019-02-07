@@ -1,5 +1,4 @@
 import React from "react";
-import { navigateTo } from "gatsby-link";
 /* eslint-disable */
 
 function encode(data) {
@@ -29,7 +28,7 @@ export default class ContactForm extends React.Component {
         ...this.state
       })
     })
-      .then(() => navigateTo(form.getAttribute("action")))
+      .then(() => (window.location = "/"))
       .catch(error => alert(error));
   };
 
@@ -42,7 +41,7 @@ export default class ContactForm extends React.Component {
         </a>
         <div id="contact" className="">
           <form
-            name="contact"
+            name="literary-contact"
             method="POST"
             action="/#ThankYou"
             data-netlify="true"
