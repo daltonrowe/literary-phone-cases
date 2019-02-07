@@ -1,12 +1,12 @@
 import React from "react";
 import { navigateTo } from "gatsby-link";
+/* eslint-disable */
 
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 }
-/* eslint-disable */
 
 export default class Contact extends React.Component {
   constructor(props) {
