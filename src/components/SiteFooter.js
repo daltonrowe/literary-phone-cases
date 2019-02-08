@@ -26,7 +26,7 @@ export default () => (
         >
           Dalton Rowe
         </a>
-        , based on public domain assets.
+        , based on public domain illustrations.
       </p>
     </div>
   </div>

@@ -12,8 +12,8 @@ export default () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Literary Accessories - Shakespeare, Jane Austen, Accessories and Neat
-          Stuff
+          Literary Accessories &amp; Phone Cases - Shakespeare, Jane Austen,
+          Accessories, Literature
         </title>
         <link rel="canonical" href="https://literaryaccessories.com" />
         <script
