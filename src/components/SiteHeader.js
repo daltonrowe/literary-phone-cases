@@ -12,7 +12,7 @@ export default () => (
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://www.redbubble.com/people/daltonrowe"
+        href="https://www.redbubble.com/people/daltonrowe/portfolio"
       >
         RedBubble
       </a>
