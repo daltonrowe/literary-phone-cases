@@ -179,7 +179,7 @@ li.DesignItem a.ImageWrapper {
    }
 
    li.DesignItem a.ImageWrapper {
-      height:320px;
+      height:265px;
    }
    
    li.DesignItem:not(:nth-of-type(5n)) {
