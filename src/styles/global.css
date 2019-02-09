@@ -167,7 +167,7 @@ li.DesignItem a.ImageWrapper {
    }
 
    li.DesignItem a.ImageWrapper {
-      max-height:200px;
+      height:250px;
    }
 }
 
@@ -175,6 +175,10 @@ li.DesignItem a.ImageWrapper {
    li.DesignItem {
       flex:0 0 19%;
       margin-bottom:1.25%;
+   }
+
+   li.DesignItem a.ImageWrapper {
+      height:320px;
    }
    
    li.DesignItem:not(:nth-of-type(5n)) {
