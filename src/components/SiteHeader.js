@@ -5,7 +5,8 @@ export default () => (
     <h1>Literary Phone Cases &amp; Accessories</h1>
     <p>
       My wife wanted some phone case designs, so I thought y'all might want some
-      too :)
+      too :) Most designs are available on a variety of different products from
+      cases, to pillows, to posters.
     </p>
     <p>
       All cases are available for sale on{" "}
