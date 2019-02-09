@@ -172,9 +172,9 @@ li.DesignItem a.ImageWrapper {
    }
 }
 
-@media screen and (min-width:700px) and (max-width:1199px) {
+@media screen and (min-width:950px) and (max-width:1199px) {
    li.DesignItem a.ImageWrapper {
-      height:250px;
+      height:275px;
    }
 }
 
