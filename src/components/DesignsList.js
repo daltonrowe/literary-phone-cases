@@ -27,11 +27,7 @@ const DesignsList = () => {
       `}
       render={data => {
         const DesignItems = data.allMarkdownRemark.edges.map(edge => {
-          return (
-            <>
-              <DesignItem key={edge.node.id} design={edge.node} />
-            </>
-          );
+          return <DesignItem key={edge.node.id} design={edge.node} />;
         });
 
         return <ul className="DesignsList">{DesignItems}</ul>;

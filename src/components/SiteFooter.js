@@ -4,6 +4,15 @@ export default () => (
   <div id="SiteFooter">
     <div id="FooterTech">
       <p>Built with GatsbyJS and Netlify CMS</p>
+      <p className="privacy">
+        <span role="img" aria-label="cookie">
+          🍪
+        </span>{" "}
+        This site uses cookies from Google to deliver its services and analyze
+        traffic. Your IP address and user-agent are shared with Google along
+        with performance and security metrics to ensure quality of service,
+        generate usage statistics, and to detect and address abuse.
+      </p>
     </div>
     <div id="FooterGit">
       <p>

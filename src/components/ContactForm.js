@@ -1,5 +1,4 @@
 import React from "react";
-/* eslint-disable */
 
 function encode(data) {
   return Object.keys(data)
@@ -10,8 +9,43 @@ function encode(data) {
 export default class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      subject: "[Phone Case Idea]",
+      formClassName: "closed",
+      thanksClassName: "closed",
+      errorClassName: "hidden"
+    };
   }
+
+  showForm = e => {
+    this.setState({ formClassName: "open" });
+  };
+
+  closeForm = e => {
+    this.setState({ formClassName: "closed" });
+  };
+
+  showThanks = e => {
+    this.setState({ thanksClassName: "open" });
+  };
+
+  closeThanks = e => {
+    this.setState({ thanksClassName: "closed" });
+  };
+
+  validateForm = () => {
+    if (
+      this.state.name &&
+      this.state.name !== "" &&
+      this.state.email &&
+      this.state.email !== "" &&
+      this.state.message &&
+      this.state.message !== ""
+    ) {
+      return true;
+    }
+    return false;
+  };
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -20,26 +54,45 @@ export default class ContactForm extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...this.state
+
+    if (this.validateForm()) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": form.getAttribute("name"),
+          ...this.state
+        })
       })
-    })
-      .then(() => (window.location = "/#ThankYou"))
-      .catch(error => alert(error));
+        .then(() => {
+          this.closeForm();
+          this.showThanks();
+          window.location = "/#ThankYou";
+        })
+        .catch(error => alert(error));
+    } else {
+      this.setState({ errorClassName: "show-error" });
+    }
   };
 
   render() {
     return (
       <div id="ContactForm">
         <h2>Want Something Special?</h2>
-        <a id="ContactButton" href="#contact">
+        <button id="ContactButton" onClick={this.showForm}>
           Let me know!
-        </a>
-        <div id="contact" className="">
+        </button>
+        <div id="ThankYou" className={this.state.thanksClassName}>
+          <div id="ThankYouInner">
+            <h3>Thank You!</h3>
+            <p>
+              Your message has been recieved, I will respond as soon as
+              possible. Hopefully I can help you out!
+            </p>
+            <button onClick={this.closeThanks}>Close</button>
+          </div>
+        </div>
+        <div id="contact" className={this.state.formClassName}>
           <form
             name="literary-contact"
             method="POST"
@@ -55,6 +108,9 @@ export default class ContactForm extends React.Component {
                 something special for a loved one? I'll let you know if I can
                 help.
               </p>
+              <div id="FormError" className={this.state.errorClassName}>
+                Please complete all form fields.
+              </div>
               <p className="hidden">
                 <label>
                   Don’t fill this out if you're human:{" "}
@@ -99,8 +155,8 @@ export default class ContactForm extends React.Component {
             <div id="submit">
               <button type="submit">Send</button>
             </div>
-            <div id="close">
-              <a href="#">Close</a>
+            <div id="close" onClick={this.closeForm}>
+              Close
             </div>
           </form>
         </div>

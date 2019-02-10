@@ -225,6 +225,7 @@ li.DesignItem a.PurchaseLink:hover {
    text-align: center;
    background-color: white;
    text-decoration: none;
+   cursor:pointer;
 }
 
 #ContactForm h2 {
@@ -256,19 +257,29 @@ li.DesignItem a.PurchaseLink:hover {
    transform:translateY(-100%);
 }
 
-#contact:target {
+#contact.open {
    pointer-events: all;
    opacity:1;
    z-index:2;
    transform:translateY(0px);
 }
 
-#contact:target form {
+#contact.open form {
    margin:0;
    display: grid;
    grid-template-columns: 50% 50%;
    grid-template-rows: auto auto;
    grid-template-areas: "form form" "submit close";
+}
+
+#FormError {
+   padding:1em;
+   border:5px solid white;
+   margin-bottom:1em;
+}
+
+#FormError.hidden {
+   display:none;
 }
 
 #hmu { 
@@ -278,8 +289,15 @@ li.DesignItem a.PurchaseLink:hover {
 #contact button { 
    grid-area: submit; 
 }
-#contact #close { 
+#contact #close {
+   text-align: center;
+   padding:1em;
    grid-area: close; 
+   cursor:pointer;
+}
+
+#contact #close:hover {
+   text-decoration: underline;
 }
 
 input, textarea {
@@ -323,10 +341,6 @@ textarea {
    transform:translateY(-4px);
 }
 
-#contact a {
-   border-color: transparent;
-}
-
 label {
    color:black;
 }
@@ -367,4 +381,48 @@ label {
       grid-area:copy;
       text-align: right;
    }
+}
+
+.privacy {
+   font-size:10px;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Thank You */
+/* ------------------------------------------------------------------------ */
+
+#ThankYou {
+   position:fixed;
+   top:0;
+   left:0;
+   width:100%;
+   max-height: 0;
+   overflow:hidden;
+   transition:all 1s ease;
+   pointer-events: none;
+}
+
+#ThankYou.open {
+   max-height:1000px;
+   margin-bottom:2em;
+   pointer-events: all;
+}
+
+#ThankYouInner {
+   text-align: center;
+   font-size:1.5em;
+   color:white;
+   margin:0 auto;
+   padding:1.5em 1em 1em 1em;
+   background-color:#ff395e;
+   background: linear-gradient(45deg, #ff395e 0%,#ff7d95 100%);
+}
+
+#ThankYou h3 {
+   font-size:30px;
+}
+
+#ThankYou p {
+   font-size:21px;
+   line-height:1.8em;
 }
