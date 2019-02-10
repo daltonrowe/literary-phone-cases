@@ -16,7 +16,6 @@ const DesignItem = ({ design, imgData }) => {
             alt={design.frontmatter.alt}
             fluid={imgData.childImageSharp.fluid}
           />
-          <img src={design.frontmatter.image} alt={design.frontmatter.alt} />
         </a>
         <h2>{design.frontmatter.title}</h2>
         <span>{design.frontmatter.description}</span>
