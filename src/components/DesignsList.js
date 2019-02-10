@@ -17,7 +17,7 @@ const DesignsList = () => {
               fluid(
                 maxWidth: 380
                 quality: 70
-                traceSVG: { background: "#fbfafc", color: "#dbd4e2" }
+                traceSVG: { background: "#f2f1f6", color: "#ddd" }
               ) {
                 ...GatsbyImageSharpFluid_tracedSVG
               }
