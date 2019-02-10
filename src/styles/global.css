@@ -357,6 +357,23 @@ label {
    margin-top:2em;
 }
 
+#FooterGit {
+   margin:1em 0;
+}
+
+#FooterGit a {
+   display:inline-block;
+   width:auto;
+   padding:.5em;
+   background-color: #fff;
+   border-radius:8px;
+   text-transform: uppercase;
+   padding:.5em;
+   text-decoration: none;
+   font-size:14px;
+   border:2px solid #ff395e;
+}
+
 @media screen and (min-width:800px) {
    #SiteFooter {
       display: grid;
@@ -373,6 +390,7 @@ label {
    }
 
    #FooterGit {
+      margin:0;
       grid-area:git;
       text-align: center;
    }
