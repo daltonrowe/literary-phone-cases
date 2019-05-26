@@ -1,6 +1,6 @@
 # Literary Phone Cases Gatsby + Netlify CMS site
 
-Used to display some phone cases I made one time, an experiment with using GraphQL, React, and Netlify CDS. It was/is a pleasure :)
+Used to display some phone cases I made one time, an experiment with using GraphQL, React, and Netlify CMS. It was/is a pleasure :)
 
 ## Points to Expand
 - Netlify Identity Integration
